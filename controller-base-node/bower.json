@@ -1,0 +1,22 @@
+{
+  "name": "controller-base-node",
+  "description": "controller base on node-ar-drone",
+  "main": "index.js",
+  "authors": [
+    "吴家荣"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/wujr5/quadrotor-principle-and-design-with-ar.drone2.0",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.1"
+  }
+}

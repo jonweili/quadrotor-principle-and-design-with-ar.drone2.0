@@ -1,0 +1,15 @@
+{
+  "name": "controller-base-node",
+  "version": "1.0.0",
+  "description": "controller base on node-ar-drone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "吴家荣",
+  "license": "MIT",
+  "dependencies": {
+    "ar-drone": "^0.3.3",
+    "express": "^4.13.4"
+  }
+}
