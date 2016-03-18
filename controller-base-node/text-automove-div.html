@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>鼠标的距离</title>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+
+            var mouseX;
+            var mouseY;
+            
+            function show(event) {
+                mouseOver(event);
+                var infoDiv = document.getElementById('infoDiv');
+                document.getElementById("a").innerHTML = mouseX + " " + mouseY ;
+                infoDiv.style.display = "block";
+                infoDiv.innerHTML = mouseX + " " + mouseY;
+                infoDiv.style.left = mouseX + 10 + "px";
+                infoDiv.style.top = mouseY + 10 + "px";    
+            }
+
+            function hide() {
+                var infoDiv = document.getElementById('infoDiv').style.display = "none";
+            }
+
+            function mouseOver(obj) {
+                e = obj || window.event;
+                // 此处记录鼠标停留在组建上的时候的位置, 可以自己通过加减常量来控制离鼠标的距离.
+                mouseX =  e.layerX || e.offsetX;
+                mouseY =  e.layerY || e.offsetY; 
+            }
+
+        </script>
+    </head>
+    <body>
+        <div onmousemove="show(event);" onmouseout="hide();" style="margin:150px ; background:#ff0; height:300px; width:300px; position:relative; ">鼠标相对于触发事件元素的位置<strong id="a"></strong>
+        <div id="infoDiv" style="display: none; position: absolute; width: 100px; height: 100px; background-color: #F1F19B;"></div>
+        </div>
+    </body>
+</html>
