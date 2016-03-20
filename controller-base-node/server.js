@@ -19,16 +19,16 @@ app.use(express.static(__dirname));
 
 io.on('connection', function (socket) {
   console.log('connected!');
-  socket.on('take-off', function (data) {
-    console.log('take-off', data);
+  socket.on('take-off', function () {
+    console.log('take-off');
     client.takeoff();
   });
-  socket.on('land', function (data) {
-    console.log('land', data);
+  socket.on('land', function () {
+    console.log('land');
     client.land();
   });
-  socket.on('stop', function (data) {
-    console.log('stop', data);
+  socket.on('stop', function () {
+    console.log('stop');
     client.stop();
   });
 
